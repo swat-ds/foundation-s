@@ -1,0 +1,76 @@
+@charset 'utf-8';
+
+@import 'globals-default';
+
+@import "util/util";
+
+/* spartan-regular - latin */
+@font-face {
+    font-family: 'Spartan';
+    font-style: normal;
+    font-weight: 500;
+    src: local(''),
+         url('../fonts/spartan-v2-latin-500.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/spartan-v2-latin-500.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  
+  /* spartan-800 - latin */
+  @font-face {
+    font-family: 'Spartan';
+    font-style: bold;
+    font-weight: 800;
+    src: local(''),
+         url('../fonts/spartan-v2-latin-800.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/spartan-v2-latin-800.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  
+
+$foundation-palette: (
+  primary: #01031a,
+//   primary: #000,
+  secondary: #777f96,
+  success: #3adb76,
+  warning: #ffae00,
+  alert: #cc4b37,
+);
+$body-font-family: 'Spartan', sans-serif;
+
+@import 'settings';
+
+// Sea Foam Settings
+
+$topbar-background: $primary-color;
+  
+$thumbnail-border: unset;
+$thumbnail-shadow: 0 0 6px 1px rgba($primary-color, 0.5);
+$thumbnail-shadow-hover: 0 0 16px 1px rgba($primary-color, 0.75);
+
+$button-background: $secondary-color;
+$button-color: $primary-color;
+
+@import 'foundation-core';
+@import 'omeka';
+
+header a {
+  color: $white;
+}
+
+header a.site-title {
+    display: block;
+    height: 105px;
+    margin: 1em 0;
+    border-radius: 3px;
+    background: center / cover no-repeat #fff url("../img/noun_DeLorean_1235983.svg");
+
+
+
+}
+
+header a.site-title img::before {
+    content: "Back to the Future";
+    position: relative;
+    color: $primary-color;
+    font-weight: bold;
+    font-size: 20px;
+    padding-top: 5rem;
+}
