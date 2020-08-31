@@ -55,22 +55,22 @@ header a {
   color: $white;
 }
 
-header a.site-title {
-    display: block;
-    height: 105px;
-    margin: 1em 0;
-    border-radius: 3px;
-    background: center / cover no-repeat #fff url("../img/noun_DeLorean_1235983.svg");
+// header a.site-title {
+//     display: block;
+//     height: 105px;
+//     margin: 1em 0;
+//     border-radius: 3px;
+//     background: center / cover no-repeat #fff url("../img/noun_DeLorean_1235983.svg");
 
 
 
-}
+// }
 
-header a.site-title img::before {
-    content: "Back to the Future";
-    position: relative;
-    color: $primary-color;
-    font-weight: bold;
-    font-size: 20px;
-    padding-top: 5rem;
-}
+// header a.site-title img::before {
+//     content: "Back to the Future";
+//     position: relative;
+//     color: $primary-color;
+//     font-weight: bold;
+//     font-size: 20px;
+//     padding-top: 5rem;
+// }
