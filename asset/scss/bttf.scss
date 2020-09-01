@@ -28,7 +28,7 @@
 $foundation-palette: (
   primary: #01031a,
 //   primary: #000,
-  secondary: #777f96,
+  secondary: lighten(#777f96,35%),
   success: #3adb76,
   warning: #ffae00,
   alert: #cc4b37,
@@ -37,8 +37,6 @@ $body-font-family: 'Spartan', sans-serif;
 
 @import 'settings';
 
-// Sea Foam Settings
-
 $topbar-background: $primary-color;
   
 $thumbnail-border: unset;
@@ -46,6 +44,7 @@ $thumbnail-shadow: 0 0 6px 1px rgba($primary-color, 0.5);
 $thumbnail-shadow-hover: 0 0 16px 1px rgba($primary-color, 0.75);
 
 $button-background: $secondary-color;
+$button-background-hover: scale-color($warning-color, $lightness: -15%);
 $button-color: $primary-color;
 
 @import 'foundation-core';
