@@ -37,11 +37,13 @@ $body-font-family: 'Spartan', sans-serif;
 
 @import 'settings';
 
+/* Local Settings */
+
 $topbar-background: $primary-color;
   
 $thumbnail-border: unset;
 $thumbnail-shadow: 0 0 6px 1px rgba($primary-color, 0.5);
-$thumbnail-shadow-hover: 0 0 16px 1px rgba($primary-color, 0.75);
+$thumbnail-shadow-hover: 0 0 8px 1px rgba($primary-color, 0.75);
 
 $button-background: $secondary-color;
 $button-background-hover: scale-color($warning-color, $lightness: -15%);
@@ -54,22 +56,19 @@ header a {
   color: $white;
 }
 
-// header a.site-title {
-//     display: block;
-//     height: 105px;
-//     margin: 1em 0;
-//     border-radius: 3px;
-//     background: center / cover no-repeat #fff url("../img/noun_DeLorean_1235983.svg");
+header a.site-title::after {
+    content: ' ';
+    display: block;
+    background: center / cover no-repeat #fff url(https://s3.amazonaws.com/sc-lib-ds-omeka-s/asset/9edea578bc0db99c42e89fd6e9ff84ac934d7117.svg);
+    border-radius: 3px;
+    padding: 5rem;
+}
 
+#content p a {
+  text-decoration: underline;
 
+  &:hover {
+    text-decoration: none;
+  }
 
-// }
-
-// header a.site-title img::before {
-//     content: "Back to the Future";
-//     position: relative;
-//     color: $primary-color;
-//     font-weight: bold;
-//     font-size: 20px;
-//     padding-top: 5rem;
-// }
+}
