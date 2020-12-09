@@ -84,7 +84,7 @@ header a.site-title::after {
 }
 
 
-body.vertical-menu #content #blocks.blocks p,
+body.vertical-menu #content #blocks.blocks > p,
 body.vertical-menu #content #blocks.blocks .callout {
     margin-left: 10rem;
     @include breakpoint(medium down) {
