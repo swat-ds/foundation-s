@@ -114,6 +114,7 @@ $header-styles: (
     'h4': ('font-size': 18),
     'h5': ('font-size': 18),
     'h6': ('font-size': 16),
+    'p': ('font-size': 16),
   ),
   medium: (
     'h1': ('font-size': 48),
@@ -122,12 +123,13 @@ $header-styles: (
     'h4': ('font-size': 20),
     'h5': ('font-size': 20),
     'h6': ('font-size': 16),
+    'p': ('font-size': 18),
   ),
 );
 $header-text-rendering: optimizeLegibility;
 $small-font-size: 80%;
 $header-small-font-color: $medium-gray;
-$paragraph-lineheight: 1.6;
+$paragraph-lineheight: 1.2;
 $paragraph-margin-bottom: 1rem;
 $paragraph-text-rendering: optimizeLegibility;
 $code-color: $black;

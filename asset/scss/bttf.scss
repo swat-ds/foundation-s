@@ -99,15 +99,81 @@ header a.site-title::after {
   .property {
     max-width: 640px;
   }
-
 }
 
 header,
 footer,
 .property dt,
+.property dl,
+.property.tags,
 .quotation {
   font-family: $header-font-family;
-  a {
+}
+
+header a,
+footer a {
+  text-decoration: none;
+}
+
+.property.tags {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  
+  .tag {
+    padding: .25rem;
+    margin: .25rem;
+    background-color: rgba($secondary-color,.5);
+    border-radius: 3px;
+    transition: background-color .25s;
+  }
+
+  .tag:hover {
+    background-color: rgba($primary-color,.75);
+    a {color: $secondary-color;}
+  }
+
+  .tag a {
     text-decoration: none;
+  }
+}
+
+.grid-x {
+  flex-direction: column-reverse;
+}
+
+#content #blocks .hTagcloud {
+
+  li {
+    display: inline-block;
+    font-family: $header-font-family;
+    border: 1.5px solid rgba($primary-color,.25);
+    border-radius: 5px;
+    padding: 0.25rem .25rem 0rem .25rem;
+    background-color: rgba($secondary-color,.25);
+    transition: background-color .25s;
+  }
+  
+  li a {
+      text-decoration: none;
+    }
+    
+  li:hover {
+      background-color: rgba($primary-color,.75);
+      a {color: $secondary-color;}
+  }
+
+
+  .vvvvvvvv-popular {
+    line-height: 4rem;
+  }
+  .vvvvvvv-popular {
+    line-height: 3.5rem;
+  }
+  .vvvvvv-popular {
+    line-height: 3rem;
+  }
+  .vvvv-popular {
+    line-height: 2.5rem;
   }
 }
