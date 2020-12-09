@@ -583,7 +583,7 @@ body.vertical-menu footer {
   @include xy-cell(4);
   margin-right: 0;
   
-  @include breakpoint(medium down) {
+  @include breakpoint(xxlarge down) {
     width: 100%;
     margin-left: 0;
   }

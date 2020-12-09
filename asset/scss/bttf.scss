@@ -23,6 +23,23 @@
          url('../fonts/spartan-v2-latin-800.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
          url('../fonts/spartan-v2-latin-800.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
   }
+
+  /* fanwood-regular */
+@font-face {
+    font-family: 'Fanwood';
+    font-style: normal;
+    font-weight: 400;
+    src: local(''),
+         url('../fonts/fanwood-webfont.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  
+  /* fanwood-italic */
+  @font-face {
+    font-family: 'Fanwood';
+    font-style: italic;
+    src: local(''),
+         url('../fonts/fanwood_italic-webfont.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
   
 
 $foundation-palette: (
@@ -33,7 +50,9 @@ $foundation-palette: (
   warning: #ffae00,
   alert: #cc4b37,
 );
-$body-font-family: 'Spartan', sans-serif;
+
+$body-font-family: 'Fanwood', serif;
+$header-font-family: 'Spartan', sans-serif;
 
 @import 'settings';
 
@@ -59,7 +78,7 @@ header a {
 header a.site-title::after {
     content: ' ';
     display: block;
-    background: center / cover no-repeat #fff url(https://s3.amazonaws.com/sc-lib-ds-omeka-s/asset/9edea578bc0db99c42e89fd6e9ff84ac934d7117.svg);
+    background: center / cover no-repeat #fff url(../img/russ-navy-clock-thumb.jpg);
     border-radius: 3px;
     padding: 5rem;
 }
@@ -71,4 +90,24 @@ header a.site-title::after {
     text-decoration: none;
   }
 
+}
+
+#content #blocks {
+
+  p, h1, h2, h3,
+  .callout,
+  .property {
+    max-width: 640px;
+  }
+
+}
+
+header,
+footer,
+.property dt,
+.quotation {
+  font-family: $header-font-family;
+  a {
+    text-decoration: none;
+  }
 }
