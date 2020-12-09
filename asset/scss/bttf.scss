@@ -84,7 +84,7 @@ header a.site-title::after {
 }
 
 
-body.vertical-menu #content #blocks.blocks > p,
+body.vertical-menu #content #blocks.blocks p,
 body.vertical-menu #content #blocks.blocks .callout {
     margin-left: 10rem;
     @include breakpoint(medium down) {
@@ -120,7 +120,9 @@ footer,
 .property dt,
 .property dl,
 .property.tags,
-.quotation {
+.quotation,
+.browse-controls,
+#advanced-search {
   font-family: $header-font-family;
 }
 
@@ -139,7 +141,7 @@ footer a {
     margin: .25rem;
     background-color: rgba($secondary-color,.5);
     border-radius: 3px;
-    transition: background-color .25s;
+    transition: background-color .25s ease-out;
   }
 
   .tag:hover {
@@ -152,7 +154,7 @@ footer a {
   }
 }
 
-.grid-x {
+.resource-title + .grid-x {
   flex-direction: column-reverse;
 }
 
@@ -165,7 +167,7 @@ footer a {
     border-radius: 5px;
     padding: 0.25rem .25rem 0rem .25rem;
     background-color: rgba($secondary-color,.25);
-    transition: background-color .25s;
+    transition: background-color .25s ease-out;
   }
   
   li a {
@@ -188,5 +190,46 @@ footer a {
   }
   .vvvv-popular {
     line-height: 2.5rem;
+  }
+}
+
+#advanced-search {
+  max-width: 640px;
+
+  .field {
+    display: none;
+  }
+
+  .field:nth-of-type(1){
+    display:block;
+  }
+
+  button {
+    @extend .button;
+  }
+}
+
+.resource-grid .item.resource {
+  border-radius: 3px;
+  transition: background-color .25s ease-out;
+  .resource-meta {
+    font-family: $header-font-family;
+  }
+  a {
+    text-decoration: none;
+  }
+
+  &:hover {
+    background-color: rgba($primary-color,.75);
+    color: $secondary-color;
+
+    h4 a {
+      color: $secondary-color;
+    }
+    a.thumbnail {
+      -webkit-box-shadow: $thumbnail-shadow-hover;
+      box-shadow: $thumbnail-shadow-hover;
+
+    }
   }
 }
