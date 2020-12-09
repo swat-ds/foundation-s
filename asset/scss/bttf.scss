@@ -83,6 +83,15 @@ header a.site-title::after {
     padding: 5rem;
 }
 
+
+body.vertical-menu #content #blocks.blocks > p,
+body.vertical-menu #content #blocks.blocks .callout {
+    margin-left: 10rem;
+    @include breakpoint(medium down) {
+      padding-left: 1rem;
+    }
+}
+
 #content p a {
   text-decoration: underline;
 
@@ -90,6 +99,11 @@ header a.site-title::after {
     text-decoration: none;
   }
 
+}
+
+#content p {
+  margin-bottom: $paragraph-margin-bottom;
+  line-height: $paragraph-lineheight;
 }
 
 #content #blocks {
