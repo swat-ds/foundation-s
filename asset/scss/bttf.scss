@@ -44,9 +44,11 @@
 /*   defines local foundation settings   */
 
 $foundation-palette: (
-  primary: #01031a,
-//   primary: #000,
-  secondary: lighten(#777f96,35%),
+  // primary: #01031a,
+  primary: #1a2260,
+  // primary: darken(#1a2961, 5%),
+  // secondary: lighten(#777f96,35%),
+  secondary: #c8dbd7,
   success: #3adb76,
   warning: #ffae00,
   alert: #cc4b37,
@@ -64,16 +66,31 @@ $thumbnail-shadow: 0 0 6px 1px rgba($primary-color, 0.5);
 $thumbnail-shadow-hover: 0 0 8px 1px rgba($primary-color, 0.75);
 
 $button-background: $secondary-color;
-$button-background-hover: scale-color($warning-color, $lightness: -15%);
+// $button-background-hover: scale-color($warning-color, $lightness: -15%);
+$button-background-hover: darken($secondary-color, 15%);
 $button-color: $primary-color;
+
+$base-border: .5rem solid $primary-color;
 
 @import 'foundation-core';
 @import 'omeka';
 
 /*   styles header/sidebar + footer  */
 
-header a {
-  color: $white;
+body.vertical-menu #content,
+body.vertical-menu footer {
+  background-color: lighten($secondary-color, 10%);
+  border: $base-border;
+}
+body.vertical-menu #content {
+  border-bottom-width: .25rem;
+}
+body.vertical-menu footer {
+  border-top-width: .25rem;
+}
+
+body.vertical-menu header a {
+  color: $secondary-color;
 }
 
 header a,
@@ -244,7 +261,7 @@ body.vertical-menu #content #blocks {
   }
 
   &:hover {
-    background-color: rgba($primary-color,.75);
+    background-color: rgba($primary-color,.9);
     color: $secondary-color;
 
     h4 a {
