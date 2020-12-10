@@ -117,7 +117,11 @@ body.vertical-menu footer {
     }
 }
 
-#content p a {
+body.vertical-menu #content {
+  max-width: 1200px;
+}
+
+body.vertical-menu #content p a {
   text-decoration: underline;
 
   &:hover {
@@ -126,12 +130,12 @@ body.vertical-menu footer {
 
 }
 
-#content p {
+body.vertical-menu #content p {
   margin-bottom: $paragraph-margin-bottom;
   line-height: $paragraph-lineheight;
 }
 
-#content #blocks {
+body.vertical-menu #content #blocks {
 
   p, h1, h2, h3,
   .callout,
