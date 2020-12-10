@@ -87,9 +87,14 @@ footer,
 .property dl,
 .property.tags,
 .quotation,
+.caption p,
 .browse-controls,
 #advanced-search {
   font-family: $header-font-family;
+}
+
+.caption p {
+  font-size: 1rem;
 }
 
 header a.site-title::after {
@@ -102,13 +107,6 @@ header a.site-title::after {
 
 /*   styles additional typography/layout   */
 
-// body.vertical-menu #content #blocks.blocks > p,
-// body.vertical-menu #content #blocks.blocks .callout {
-//     margin-left: 10rem;
-//     @include breakpoint(medium down) {
-//       padding-left: 1rem;
-//     }
-// }
 body.vertical-menu #content,
 body.vertical-menu footer {
     padding-left: 10rem;
