@@ -115,10 +115,9 @@ body.vertical-menu footer {
     @include breakpoint(medium down) {
       padding-left: 1rem;
     }
-}
-
-body.vertical-menu #content {
-  max-width: 1200px;
+    @media screen and (min-width: 1450px) {
+      padding-right: 10rem;
+    }
 }
 
 body.vertical-menu #content p a {
@@ -137,7 +136,7 @@ body.vertical-menu #content p {
 
 body.vertical-menu #content #blocks {
 
-  p, h1, h2, h3,
+  p,
   .callout,
   .property {
     max-width: 640px;
