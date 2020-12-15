@@ -137,7 +137,7 @@ body.vertical-menu #content {
   h1,
   h3,
   ul,
-  .callout
+  .callout,
   blockquote {
       @include xy-cell-offset(1);
       @include breakpoint(medium down) {
