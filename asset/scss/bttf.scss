@@ -131,9 +131,14 @@ header a.site-title::after {
 
 /*   styles additional typography/layout   */
 
-body.vertical-menu #content,
+body.vertical-menu #content p,
+body.vertical-menu #content h1,
+body.vertical-menu #content h2,
+body.vertical-menu #content h3,
+body.vertical-menu #content .callout,
 body.vertical-menu footer {
-    padding-left: 10rem;
+    // padding-left: 10rem;
+    @include xy-cell-offset(1);
     @include breakpoint(medium down) {
       padding-left: 1rem;
     }
@@ -161,8 +166,11 @@ body.vertical-menu #content #blocks {
   p,
   .callout,
   .property {
-    max-width: 640px;
+    max-width: 680px;
   }
+
+  p.full-width { max-width: unset;}
+
 }
 
 /* show item */
@@ -240,7 +248,7 @@ body.vertical-menu #content #blocks {
 /*   styles advanced search widget   */
 
 #advanced-search {
-  max-width: 640px;
+  max-width: 680px;
 
   .field {
     display: none;
