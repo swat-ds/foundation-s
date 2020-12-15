@@ -154,6 +154,12 @@ body.vertical-menu #content {
   .callout p {
     @include xy-cell-offset(0);
   }
+
+  .item.resource p,
+  .item.resource h3 {
+    max-width: 20rem;
+  }
+
 }
 
 body.vertical-menu #content p a {
@@ -302,5 +308,5 @@ body.vertical-menu #content #blocks {
 
 .center .attachments {
   @include xy-grid;
-  justify-content: center;
+  justify-content: space-around;
 }
