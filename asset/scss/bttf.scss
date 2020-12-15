@@ -144,8 +144,15 @@ body.vertical-menu #content {
         padding-left: 1rem;
       }
       @media screen and (min-width: 1450px) {
-        padding-right: 10rem;
+        // padding-right: 10rem;
       }
+  }
+
+  .item.resource p,
+  .item.resource h3,
+  .callout h2,
+  .callout p {
+    @include xy-cell-offset(0);
   }
 }
 
@@ -291,4 +298,9 @@ body.vertical-menu #content #blocks {
 
     }
   }
+}
+
+.center .attachments {
+  @include xy-grid;
+  justify-content: center;
 }
