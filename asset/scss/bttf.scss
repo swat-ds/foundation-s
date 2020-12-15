@@ -136,8 +136,9 @@ body.vertical-menu #content {
   h2,
   h1,
   h3,
-  .callout {
-      // padding-left: 10rem;
+  ul,
+  .callout
+  blockquote {
       @include xy-cell-offset(1);
       @include breakpoint(medium down) {
         padding-left: 1rem;
@@ -165,6 +166,7 @@ body.vertical-menu #content p {
 body.vertical-menu #content #blocks {
 
   p,
+  ul
   .callout,
   .property {
     max-width: 680px;
