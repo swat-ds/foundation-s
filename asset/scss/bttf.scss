@@ -136,6 +136,9 @@ body.vertical-menu #content {
   h2,
   h1,
   h3,
+  h4,
+  h5,
+  h6,
   ul,
   .callout,
   blockquote {
@@ -151,12 +154,14 @@ body.vertical-menu #content {
   .item.resource p,
   .item.resource h3,
   .callout h2,
+  .callout h3,
   .callout p {
     @include xy-cell-offset(0);
   }
 
   .item.resource p,
-  .item.resource h3 {
+  .item.resource h3,
+  .item.resource caption {
     max-width: 20rem;
   }
 
