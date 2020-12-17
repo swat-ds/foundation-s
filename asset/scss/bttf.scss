@@ -121,35 +121,32 @@ blockquote cite {
   color: $primary-color;
 }
 
-header a.site-title::after {
-    content: ' ';
-    display: block;
-    background: center / cover no-repeat #fff url(../img/russ-navy-clock-thumb.jpg);
-    border-radius: 3px;
-    padding: 5rem;
-}
+// header a.site-title::after {
+//     content: ' ';
+//     display: block;
+//     background: center / cover no-repeat #fff url(../img/russ-navy-clock-thumb.jpg);
+//     border-radius: 3px;
+//     padding: 5rem;
+// }
 
 /*   styles additional typography/layout   */
 
 body.vertical-menu #content {
-  p,
-  h2,
-  h1,
-  h3,
-  h4,
-  h5,
-  h6,
-  ul,
-  .callout,
-  blockquote {
-      @include xy-cell-offset(1);
-      @include breakpoint(medium down) {
-        padding-left: 1rem;
-      }
-      @media screen and (min-width: 1450px) {
-        // padding-right: 10rem;
-      }
-  }
+  // p,
+  // h2,
+  // h1,
+  // h3,
+  // h4,
+  // h5,
+  // h6,
+  // ul,
+  // .callout,
+  // blockquote {
+  //     @include xy-cell-offset(1);
+  //     @include breakpoint(medium down) {
+  //       padding-left: 1rem;
+  //     }
+  // }
 
   .item.resource p,
   .item.resource h3,
@@ -183,14 +180,35 @@ body.vertical-menu #content p {
 
 body.vertical-menu #content #blocks {
 
+  // p,
+  // ul,
+  // .callout,
+  // .property {
+  //   max-width: 680px;
+  // }
+ @include xy-grid;
+ flex-direction: column;
+ align-items: center;
+
   p,
+  h2,
+  h1,
+  h3,
+  h4,
+  h5,
+  h6,
   ul,
   .callout,
-  .property {
-    max-width: 680px;
+  blockquote {
+    
+    width: 680px;
+      @include breakpoint(medium down) {
+        padding-left: 1rem;
+        width: 100%;
+      }
   }
 
-  p.full-width { max-width: unset;}
+  p.full-width { width: 100%;}
 
 }
 
@@ -207,6 +225,10 @@ body.vertical-menu #content #blocks {
 - show/item
 
 */
+
+#content #blocks .hTagcloud ul.popularity {
+  width: auto;
+}
 
 .property.tags {
   display: flex;
