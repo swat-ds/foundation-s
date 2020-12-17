@@ -346,18 +346,22 @@ body.vertical-menu #content #blocks {
 .center .attachments {
   @include xy-grid;
   justify-content: space-around;
+
+  .item.resource {
+    @include xy-gutters($gutter-position: bottom);    
+  }
 }
 
-.center.large .attachments .item.resource {
+.center.large .attachments {
   @extend .medium-up-2;
   
-  &:only-child {
+  .item-resource:only-child {
     width: 100%;
     margin: unset;    
   }
 }
 
-.center.medium .attachments {
+.center.medium .attachments\ {
   @extend .medium-up-3;
   justify-content: unset;
 }
