@@ -321,7 +321,9 @@ body.vertical-menu #content #blocks {
   .resource-meta {
     font-family: $header-font-family;
   }
-  h4 { width: auto; }
+  h4 {
+    max-width: 20rem;
+  }
 
   a {
     text-decoration: none;
@@ -344,14 +346,10 @@ body.vertical-menu #content #blocks {
 .center .attachments {
   @include xy-grid;
   justify-content: space-around;
-
-  .item.resource {
-    @include xy-gutters($gutter-position: bottom);    
-  }
 }
 
 .center.large .attachments .item.resource {
-  @include xy-cell(5);
+  @extend .medium-up-2;
   
   &:only-child {
     width: 100%;
@@ -360,9 +358,11 @@ body.vertical-menu #content #blocks {
 }
 
 .center.medium .attachments .item.resource {
-  @include xy-cell(4);
+  @extend .medium-up-3;
+  justify-content: unset;
 }
 
 .center.square .attachments .item.resource {
-  @include xy-cell(3);
+  @extend .medium-up-4;
+  justify-content: unset;
 }
