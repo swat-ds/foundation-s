@@ -94,6 +94,8 @@ body.vertical-menu header a {
 }
 
 header a,
+a.nav-header,
+#offCanvas .search,
 footer a {
   text-decoration: none;
 }
@@ -107,6 +109,7 @@ footer,
 .caption p,
 .browse-controls,
 #advanced-search,
+.search-filters,
 .site-page-pagination {
   font-family: $header-font-family;
 }
@@ -210,7 +213,9 @@ body.vertical-menu #content #blocks {
   }
 
   p.full-width { width: 100%;}
-  .callout p { width: auto; }
+  .callout { 
+    h1,h2,h3,h4,h5,h6,p { width: auto; }
+  }
 
 }
 
@@ -341,12 +346,23 @@ body.vertical-menu #content #blocks {
   justify-content: space-around;
 
   .item.resource {
-    @include xy-cell(6);
     @include xy-gutters($gutter-position: bottom);    
   }
+}
 
-  .item.resource:only-child {
+.center.large .attachments .item.resource {
+  @include xy-cell(5);
+  
+  &:only-child {
     width: 100%;
     margin: unset;    
   }
+}
+
+.center.medium .attachments .item.resource {
+  @include xy-cell(4);
+}
+
+.center.square .attachments .item.resource {
+  @include xy-cell(3);
 }
