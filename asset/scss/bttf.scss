@@ -308,12 +308,14 @@ body.vertical-menu #content #blocks {
 
 /*   styles items grid + custom static exhibits page   */
 
-.resource-grid .item.resource {
+#content #blocks .resource-grid .item.resource {
   border-radius: 3px;
   transition: background-color .25s ease-out;
   .resource-meta {
     font-family: $header-font-family;
   }
+  h4 { width: auto; }
+
   a {
     text-decoration: none;
   }
@@ -321,7 +323,6 @@ body.vertical-menu #content #blocks {
   &:hover {
     background-color: rgba($primary-color,.9);
     color: $secondary-color;
-
     h4 a {
       color: $secondary-color;
     }
