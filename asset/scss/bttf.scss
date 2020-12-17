@@ -348,7 +348,7 @@ body.vertical-menu #content #blocks {
   justify-content: space-around;
 
   .item.resource {
-    @include xy-gutters($gutter-position: bottom);    
+    @include xy-gutters($gutter-position: right bottom);    
   }
 }
 
