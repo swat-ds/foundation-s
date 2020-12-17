@@ -344,4 +344,9 @@ body.vertical-menu #content #blocks {
     @include xy-cell(6);
     @include xy-gutters($gutter-position: bottom);    
   }
+
+  .item.resource:only-child {
+    width: 100%;
+    margin: unset;    
+  }
 }
