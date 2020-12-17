@@ -199,7 +199,8 @@ body.vertical-menu #content #blocks {
   h6,
   ul,
   .callout,
-  blockquote {
+  blockquote,
+  .item-with-metadata {
     
     width: 680px;
       @include breakpoint(medium down) {
@@ -209,6 +210,7 @@ body.vertical-menu #content #blocks {
   }
 
   p.full-width { width: 100%;}
+  .callout p { width: auto; }
 
 }
 
@@ -337,4 +339,9 @@ body.vertical-menu #content #blocks {
 .center .attachments {
   @include xy-grid;
   justify-content: space-around;
+
+  .item.resource {
+    @include xy-cell(6);
+    @include xy-gutters($gutter-position: bottom);    
+  }
 }
