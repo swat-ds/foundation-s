@@ -357,12 +357,12 @@ body.vertical-menu #content #blocks {
   }
 }
 
-.center.medium .attachments .item.resource {
+.center.medium .attachments {
   @extend .medium-up-3;
   justify-content: unset;
 }
 
-.center.square .attachments .item.resource {
+.center.square .attachments {
   @extend .medium-up-4;
   justify-content: unset;
 }
