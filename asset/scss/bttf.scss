@@ -330,6 +330,10 @@ body.vertical-menu #content #blocks {
 
 /*   styles items grid + custom static exhibits page   */
 
+#content #blocks .resource-grid {
+  margin-bottom: 1em;
+}
+
 #content #blocks .resource-grid .item.resource {
   border-radius: 3px;
   transition: background-color .25s ease-out;
