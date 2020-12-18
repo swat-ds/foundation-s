@@ -348,25 +348,30 @@ body.vertical-menu #content #blocks {
   justify-content: space-around;
 
   .item.resource {
-    @include xy-gutters($gutter-position: right bottom);    
+    @include xy-gutters($gutter-position: right bottom);
   }
 }
 
-.center.large .attachments {
-  @extend .medium-up-2;
+.center.large .attachments .item.resource{
+
+  @include xy-cell(6);
   
-  .item-resource:only-child {
-    width: 100%;
-    margin: unset;    
+  &:only-child {
+    @include xy-cell();
+    margin: unset;
   }
 }
 
 .center.medium .attachments {
-  @extend .medium-up-3;
   justify-content: unset;
+  .item.resource {
+    @include xy-cell(4);
+  }
 }
 
-.center.square .attachments {
-  @extend .medium-up-4;
+.center.square .attachments { 
   justify-content: unset;
+  .item.resource {
+  @include xy-cell(3);
+  }
 }
