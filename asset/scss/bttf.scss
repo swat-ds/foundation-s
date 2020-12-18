@@ -135,34 +135,44 @@ blockquote cite {
 /*   styles additional typography/layout   */
 
 body.vertical-menu #content #blocks {
-  p,
-  h2,
-  h1,
-  h3,
-  h4,
-  h5,
-  h6,
-  ul,
+
+  &>p,
+  &>h2,
+  &>h1,
+  &>h3,
+  &>h4,
+  &>h5,
+  &>h6,
+  &>ul,
   .callout,
   blockquote {
       @include xy-cell-offset(1);
+
       @include breakpoint(medium down) {
-        padding-left: 1rem;
+        margin-left: 0;
       }
   }
 
-  .item.resource p,
-  .item.resource h3,
-  .callout h2,
-  .callout h3,
-  .callout p {
-    @include xy-cell-offset(0);
-  }
+  // .item.resource p,
+  // .item.resource h3,
+  // .callout h2,
+  // .callout h3,
+  // .callout p {
+  //   @include xy-cell-offset();
+  // }
 
-  .item.resource .caption,
-  .item.resource p,
-  .item.resource h3 {
-    max-width: 20rem;
+  .item.resource {
+    p,
+    h3,
+    .caption{
+      max-width: 20rem;
+    }
+
+    @include breakpoint(small down) {
+      h3 { 
+        display: none;
+      }
+    }
   }
 
 }
@@ -207,7 +217,6 @@ body.vertical-menu #content #blocks {
     
     width: 680px;
       @include breakpoint(medium down) {
-        padding-left: 1rem;
         width: 100%;
       }
   }
