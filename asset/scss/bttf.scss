@@ -222,6 +222,11 @@ body.vertical-menu #content #blocks {
   p.full-width {   
     width: auto;
     max-width: unset;
+    @include xy-cell-offset(0);
+  }
+
+  p.home img {
+    width: 100%;
   }
   
   .callout { 
