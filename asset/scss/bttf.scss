@@ -136,14 +136,14 @@ blockquote cite {
 
 body.vertical-menu #content #blocks {
 
-  &>p,
-  &>h2,
-  &>h1,
-  &>h3,
-  &>h4,
-  &>h5,
-  &>h6,
-  &>ul,
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  ul,
   .callout,
   blockquote {
       @include xy-cell-offset(1);
@@ -153,13 +153,11 @@ body.vertical-menu #content #blocks {
       }
   }
 
-  // .item.resource p,
-  // .item.resource h3,
-  // .callout h2,
-  // .callout h3,
-  // .callout p {
-  //   @include xy-cell-offset();
-  // }
+  .item.resource *,
+  .callout *, 
+  .caption * {
+    margin-left: 0;
+  }
 
   .item.resource {
     p,
