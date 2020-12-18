@@ -219,7 +219,11 @@ body.vertical-menu #content #blocks {
       }
   }
 
-  p.full-width { width: 100%;}
+  p.full-width {   
+    width: auto;
+    max-width: unset;
+  }
+  
   .callout { 
     h1,h2,h3,h4,h5,h6,p { width: auto; }
   }
@@ -242,6 +246,7 @@ body.vertical-menu #content #blocks {
 
 #content #blocks .hTagcloud ul.popularity {
   width: auto;
+  max-width: unset;
 }
 
 .property.tags {
@@ -397,7 +402,7 @@ body.vertical-menu #content #blocks {
 
 // works cited
 
-#content #blocks ul {
+#content #blocks > ul {
 
   li {font-size: 115%;}
 
