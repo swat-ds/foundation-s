@@ -245,9 +245,13 @@ body.vertical-menu #content #blocks {
 }
 
 .property.tags {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  @include xy-cell(6);
+  @include xy-cell-offset(3);
+  text-align: right;
+  h4 { 
+    font-size: 100%;
+    margin-right: .625em;
+  }
   
   .tag {
     padding: .25rem;
@@ -265,6 +269,10 @@ body.vertical-menu #content #blocks {
   .tag a {
     text-decoration: none;
   }
+}
+
+#resource-values .property.tags + .property {
+  display: none;
 }
 
 #content #blocks .hTagcloud {
